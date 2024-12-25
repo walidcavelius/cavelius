@@ -1,0 +1,43 @@
+name: Deploy Hugo site
+
+on:
+  push:
+    branches:
+      - main  # or whatever your primary branch is named
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive  # If you're using Git submodules
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true  # If you're using SCSS/SASS
+
+      - name: Install Node.js and npm packages
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - run: npm install
+
+      - name: Build site
+        run: hugo --minify
+
+      - name: Install SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H ${{ secrets.SERVER_IP }} >> ~/.ssh/known_hosts
+
+      - name: Deploy to server
+        run: |
+          rsync -avz --delete -e "ssh -i ~/.ssh/deploy_key" \
+            public/ \
+            ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_IP }}:${{ secrets.SERVER_DEPLOY_PATH }}
