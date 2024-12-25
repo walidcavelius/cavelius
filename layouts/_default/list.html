@@ -1,0 +1,16 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  
+  <!-- Show the content from _index.md -->
+  {{ .Content }}
+  
+  <!-- List all blog posts -->
+  <div class="mt-8 space-y-4">
+    {{ range .Pages.ByDate.Reverse }}
+        <h2 class="text-xl">
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </h2>
+        <time class="text-sm text-gray-500">{{ .Date.Format "January 2, 2006" }}</time>
+    {{ end }}
+  </div>
+{{ end }}

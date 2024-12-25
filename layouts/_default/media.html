@@ -1,0 +1,8 @@
+{{ define "main" }}
+    <h1 >media</h1>
+    <p class="mb-6">media I consumed and hopefully liked</p>
+    <h2 >the latest song i played</h2>
+    <div id="soundcloud-player" class="border border-black hover:bg-black hover:text-white inline">Loading...</div>
+    {{ $js := resources.Get "js/lastfm.js" | js.Build (dict "minify" hugo.IsProduction) }}
+    <script type="module" src="{{ $js.RelPermalink }}"></script>
+{{ end }}

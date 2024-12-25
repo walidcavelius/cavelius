@@ -1,0 +1,7 @@
+baseURL = 'https://caveli.us/'
+languageCode = 'en-us'
+title = 'caveli.us'
+[build]
+  [[build.cachebusters]]
+    source = 'layouts/.*'
+    target = 'css'
