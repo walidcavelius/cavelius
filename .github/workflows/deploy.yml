@@ -29,8 +29,10 @@ jobs:
       - name: Build site
         run: hugo --minify
 
-      - name: Install SSH key
+      - name: Install SSH key and rsync
         run: |
+          sudo apt-get update
+          sudo apt-get install -y rsync
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
