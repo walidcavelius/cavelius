@@ -2,7 +2,20 @@
     <h1 >media</h1>
     <p class="mb-6">media I consumed and hopefully liked</p>
     <h2 >the latest song i played</h2>
-    <div id="soundcloud-player" class="border border-black hover:bg-black hover:text-white inline">Loading...</div>
-    {{ $js := resources.Get "js/lastfm.js" | js.Build (dict "minify" hugo.IsProduction) }}
+<br/>
+<a href="#" id="track-link" target="_blank" class="block hover:no-underline">
+    <div class="flex h-16 items-center overflow-hidden max-w-md">
+        <div class="w-16 h-full flex-shrink-0">
+            <img id="album-art" 
+                 alt="Album artwork" 
+                 class="w-full h-full object-cover" />
+        </div>
+        <div class="flex flex-col justify-between p-3 flex-grow min-h-[4rem]">
+            <div id="song" class="font-medium text-sm truncate">Loading...</div>
+            <div id="artist" class="text-xs opacity-75 truncate">Loading...</div>
+            <div id="play-time" class="text-xs opacity-50 "></div>
+        </div>
+    </div>
+</a>    {{ $js := resources.Get "js/lastfm.js" | js.Build (dict "minify" hugo.IsProduction) }}
     <script type="module" src="{{ $js.RelPermalink }}"></script>
 {{ end }}

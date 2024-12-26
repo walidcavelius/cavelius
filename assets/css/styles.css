@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 a {
-	@apply border border-black hover:bg-black hover:text-white
+	@apply border border-[#384437] hover:bg-[#384437] hover:text-[#D2DDD6]
 }
