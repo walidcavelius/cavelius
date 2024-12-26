@@ -5,3 +5,12 @@ title = 'caveli.us'
   [[build.cachebusters]]
     source = 'layouts/.*'
     target = 'css'
+[asset]
+  js = ["js/lastfm-tracker.js"]
+
+[security]
+  [security.http]
+    mediaTypes = ["application/javascript"]
+    # Allow LastFM API calls
+    [security.http.directives]
+      connectSrc = ["'self'", "ws.audioscrobbler.com"]

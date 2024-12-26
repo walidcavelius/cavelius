@@ -16,6 +16,7 @@
             <div id="play-time" class="text-xs opacity-50 "></div>
         </div>
     </div>
-</a>    {{ $js := resources.Get "js/lastfm.js" | js.Build (dict "minify" hugo.IsProduction) }}
-    <script type="module" src="{{ $js.RelPermalink }}"></script>
+</a>
+    {{ $js := resources.Get "js/lastfm.js" | minify | fingerprint }}
+    <script src="{{ $js.RelPermalink }}" defer></script>
 {{ end }}
