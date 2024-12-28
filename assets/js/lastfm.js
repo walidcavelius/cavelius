@@ -236,7 +236,6 @@ function updateDisplay(trackElement, artistElement, artworkElement, trackInfo) {
         // Only update if the image URL has changed
         if (artworkElement.src !== trackInfo.image) {
             artworkElement.src = trackInfo.image;
-            artworkElement.alt = `Album artwork for ${trackInfo.name} by ${trackInfo.artist}`;
             
             // Set up error handling for the image
             artworkElement.onerror = () => {

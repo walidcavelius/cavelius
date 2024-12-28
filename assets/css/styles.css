@@ -5,3 +5,7 @@
 a {
 	@apply border border-[#384437] hover:bg-[#384437] hover:text-[#D2DDD6]
 }
+
+ul {
+	@apply list-disc list-inside
+}

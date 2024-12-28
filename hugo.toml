@@ -1,6 +1,7 @@
 baseURL = 'https://caveli.us/'
 languageCode = 'en-us'
 title = 'caveli.us'
+timezone = "Europe/Paris"
 [build]
   [[build.cachebusters]]
     source = 'layouts/.*'
