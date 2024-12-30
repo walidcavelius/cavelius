@@ -9,5 +9,5 @@ i used github deployments to build with hugo and deploy the website on my free o
 \
 \
 [github link](https://github.com/walidcavelius/cavelius)
-|
+
 (the lastfm api key is hardcoded, i just felt lazy. i'll fix it asap, please don't use it in the meantime 😇)
