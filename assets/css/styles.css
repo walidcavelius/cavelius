@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+p {
+	@apply my-4
+}
+
 a {
 	@apply border border-[#384437] hover:bg-[#384437] hover:text-[#D2DDD6]
 }
