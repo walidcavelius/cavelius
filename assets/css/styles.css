@@ -2,12 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+	@apply flex
+}
+
 p {
 	@apply my-4
 }
 
 a {
-	@apply border border-[#384437] hover:bg-[#384437] hover:text-[#D2DDD6]
+	@apply border border-[#DDDDDD] hover:bg-[#DDDDDD] hover:text-[#2D2D2D]
 }
 
 ul {

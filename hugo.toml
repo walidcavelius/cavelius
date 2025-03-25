@@ -14,3 +14,6 @@ timezone = "Europe/Paris"
     # Allow LastFM API calls
     [security.http.directives]
       connectSrc = ["'self'", "ws.audioscrobbler.com"]
+[params]
+lastfm_api_key = "$LASTFM_API_KEY"
+
