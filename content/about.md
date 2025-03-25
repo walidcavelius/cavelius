@@ -7,6 +7,8 @@ my interests include programming, as you may've seen, philosophy, video games an
 
 you may contact me: [walid [at] caveli [dot] us](mailto:walid@caveli.us) 
 
-and find me on [linkedin](https://www.linkedin.com/in/walid-cavelius/) or [github](https://github.com/walidcavelius)
+my [linkedin](https://www.linkedin.com/in/walid-cavelius/)
+
+my [cv](/assets/CV_en_cavelius.pdf)
 
 this website was built with hugo and nvim
