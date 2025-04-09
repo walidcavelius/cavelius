@@ -17,3 +17,60 @@ a {
 ul {
 	@apply list-disc list-inside
 }
+
+/* Styles ajoutés pour les titres */
+h1 {
+	@apply text-3xl font-bold my-6
+}
+
+h2 {
+	@apply text-2xl font-bold my-5
+}
+
+h3 {
+	@apply text-xl font-bold my-4
+}
+
+h4 {
+	@apply text-lg font-bold my-3
+}
+
+h5, h6 {
+	@apply font-bold my-2
+}
+
+/* Styles pour code */
+code {
+	@apply bg-gray-100 px-1 py-0.5 rounded font-mono text-sm
+}
+
+pre {
+	@apply bg-gray-100 p-4 rounded-lg my-4 overflow-x-auto
+}
+
+pre code {
+	@apply bg-transparent p-0
+}
+
+/* Blockquote */
+blockquote {
+	@apply border-l-4 border-gray-300 pl-4 italic my-4
+}
+
+/* Listes ordonnées */
+ol {
+	@apply list-decimal list-inside my-4
+}
+
+/* Tables */
+table {
+	@apply w-full border-collapse my-6
+}
+
+th {
+	@apply p-2 text-left font-bold border
+}
+
+td {
+	@apply p-2 border
+}
