@@ -7,9 +7,9 @@
   <!-- List all blog posts -->
   <div class="mt-8 space-y-4">
     {{ range .Pages.ByDate.Reverse }}
-        <h2 class="text-xl">
+        <div class="text-xl">
           <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        </h2>
+        </div>
         <time class="text-sm text-gray-500">{{ .Date.Format "January 2, 2006" }}</time>
     {{ end }}
   </div>
