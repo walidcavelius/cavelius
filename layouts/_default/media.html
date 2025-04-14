@@ -1,49 +1,26 @@
 {{ define "main" }}
-    <h1>media</h1>
-    <p class="mb-6">media I consumed and hopefully liked</p>
-    <h2>the latest song I played</h2>
-    <a href="#" id="track-link" target="_blank" class="block hover:no-underline">
-        <div class="flex h-16 items-center overflow-hidden max-w-md">
-            <div class="w-16 h-full flex-shrink-0">
-                <img id="album-art" 
-                     src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24'%3E%3Cpath fill='%23ccc' d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 14.5c-2.49 0-4.5-2.01-4.5-4.5S9.51 7.5 12 7.5s4.5 2.01 4.5 4.5-2.01 4.5-4.5 4.5z'/%3E%3C/svg%3E"
-                     class="w-full h-full object-cover" />
-            </div>
-            <div class="flex flex-col justify-between p-3 flex-grow min-h-[4rem]">
-                <div id="song" class="font-medium text-sm truncate">Loading...</div>
-                <div id="artist" class="text-xs opacity-75 truncate">Loading...</div>
-                <div id="play-time" class="text-xs opacity-50"></div>
-            </div>
-        </div>
-    </a>
+    <h1>{{ .Title }}</h1>
+    
+    {{ partial "media/lastfm.html" . }}
+    
     <h2 class="mt-10">reading list</h2>
-    <p>i don't read a lot but i'm trying to, i hope i'll get to remove this comment soon</p>
-        <div>
-            <h3 class="text-lg font-semibold">2025</h3>
-            <ul class="list-disc list-inside text-sm">
-                <li><em>Rendezvous with Rama</em> by Arthur C. Clarke</li>
-            </ul>
-        </div>
-        <div>
-            <h3 class="text-lg font-semibold">2024</h3>
-            <ul class="list-disc list-inside text-sm">
-                <li><em>The Last Question</em> by Isaac Asimov</li>
-                <li><em>Inside the Machine: An Illustrated Introduction to Microprocessors and Computer Architecture</em> by Jon Stokes</li>
-                <li><em>To Have Done With The Judgment Of God</em> by Antonin Artaud</li>
-                <li><em>White Nights</em> by Fyodor Dostoevsky</li>
-                <li><em>L'amour</em> by François Bégaudeau</li>
-            </ul>
-        </div>
-        <div>
-            <h3 class="text-lg font-semibold">2023</h3>
-            <ul class="list-disc list-inside text-sm">
-                <li><em>Towards Beauty</em> by David Foenkinos</li>
-                <li><em>The Metamorphosis</em> by Franz Kafka</li>
-            </ul>
-        </div>
-
-
-    {{ $js := resources.Get "js/lastfm.js" | minify | fingerprint }}
-    <script src="{{ $js.RelPermalink }}" defer></script>
+    <p>{{ .Params.reading_description | default "i don't read a lot but i'm trying to, i hope i'll get to remove this comment soon" }}</p>
+    
+    {{ with .Site.Data.reading.years }}
+        {{ $years := slice }}
+        {{ range $year, $books := . }}
+            {{ $years = $years | append (dict "year" $year "books" $books) }}
+        {{ end }}
+        {{ range sort $years "year" "desc" }}
+            <div>
+                <h3 class="text-lg font-semibold">{{ .year }}</h3>
+                <ul class="list-disc list-inside text-sm">
+                    {{ range .books }}
+                        <li><em>{{ .title }}</em> by {{ .author }}</li>
+                    {{ end }}
+                </ul>
+            </div>
+        {{ end }}
+        {{ end }}
 {{ end }}
 

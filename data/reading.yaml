@@ -1,0 +1,22 @@
+# Reading list data structure
+# This file contains books read by year
+years:
+  2025:
+    - title: "Rendezvous with Rama"
+      author: "Arthur C. Clarke"
+  2024:
+    - title: "The Last Question"
+      author: "Isaac Asimov"
+    - title: "Inside the Machine: An Illustrated Introduction to Microprocessors and Computer Architecture"
+      author: "Jon Stokes"
+    - title: "To Have Done With The Judgment Of God"
+      author: "Antonin Artaud"
+    - title: "White Nights"
+      author: "Fyodor Dostoevsky"
+    - title: "L'amour"
+      author: "François Bégaudeau"
+  2023:
+    - title: "Towards Beauty"
+      author: "David Foenkinos"
+    - title: "The Metamorphosis"
+      author: "Franz Kafka"

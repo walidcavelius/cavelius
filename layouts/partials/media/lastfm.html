@@ -1,0 +1,18 @@
+<h2>the latest song I played</h2>
+<a href="#" id="track-link" target="_blank" class="block hover:no-underline">
+    <div class="flex h-16 items-center overflow-hidden max-w-md">
+        <div class="w-16 h-full flex-shrink-0">
+            <img id="album-art" 
+                 src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24'%3E%3Cpath fill='%23ccc' d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 14.5c-2.49 0-4.5-2.01-4.5-4.5S9.51 7.5 12 7.5s4.5 2.01 4.5 4.5-2.01 4.5-4.5 4.5z'/%3E%3C/svg%3E"
+                 class="w-full h-full object-cover" />
+        </div>
+        <div class="flex flex-col justify-between p-3 flex-grow min-h-[4rem]">
+            <div id="song" class="font-medium text-sm truncate">Loading...</div>
+            <div id="artist" class="text-xs opacity-75 truncate">Loading...</div>
+            <div id="play-time" class="text-xs opacity-50"></div>
+        </div>
+    </div>
+</a>
+
+{{ $js := resources.Get "js/lastfm.js" | minify | fingerprint }}
+<script src="{{ $js.RelPermalink }}" defer></script> 
