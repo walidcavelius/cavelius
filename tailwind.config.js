@@ -6,7 +6,11 @@ export default {
     "./content/**/*.{html,md}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        simsun: ["SimSun", "sans-serif"],
+      }
+    },
   },
   plugins: [],
 }

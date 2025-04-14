@@ -1,6 +1,7 @@
 ---
-title: "Analyzing my travels during my time in paris [WIP]"
+title: "analyzing my travels during my time in paris [WIP]"
 date: 2025-02-12
+draft: false
 ---
 
 For the first time in my life, I lived in Paris from the 1st of August 2024 to the 14th of February 2025. I had an internship as part of my studies there. Living here was great and not having brought my gaming desktop with me, I had a lot of time to do actual real life activites and go out. This first blog post is dedicated to the analysis of my travels during that time.
