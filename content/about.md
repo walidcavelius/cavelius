@@ -68,8 +68,8 @@ my interests include programming, as you may've seen, philosophy, video games an
 
 you may contact me: [walid [at] caveli [dot] us](mailto:walid@caveli.us) 
 
-my [linkedin](https://www.linkedin.com/in/walid-cavelius/)
+[cv](/assets/CV_en_cavelius.pdf), [github](https://github.com/walidcavelius), [linkedin](https://www.linkedin.com/in/walid-cavelius/)
 
-my [cv](/assets/CV_en_cavelius.pdf)
-
-this website was built with hugo and nvim
+<p>
+  <img src="/assets/hugo.png" alt="hugo 88x21" style="display:inline;"/><img src="/assets/vim.gif" alt="madewithvim" style="display:inline;"/>
+</p>
