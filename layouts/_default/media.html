@@ -16,6 +16,33 @@
             </div>
         </div>
     </a>
+    <h2 class="mt-10">reading list</h2>
+    <p>i don't read a lot but i'm trying to, i hope i'll get to remove this comment soon</p>
+        <div>
+            <h3 class="text-lg font-semibold">2025</h3>
+            <ul class="list-disc list-inside text-sm">
+                <li><em>Rendezvous with Rama</em> by Arthur C. Clarke</li>
+            </ul>
+        </div>
+        <div>
+            <h3 class="text-lg font-semibold">2024</h3>
+            <ul class="list-disc list-inside text-sm">
+                <li><em>The Last Question</em> by Isaac Asimov</li>
+                <li><em>Inside the Machine: An Illustrated Introduction to Microprocessors and Computer Architecture</em> by Jon Stokes</li>
+                <li><em>To Have Done With The Judgment Of God</em> by Antonin Artaud</li>
+                <li><em>White Nights</em> by Fyodor Dostoevsky</li>
+                <li><em>L'amour</em> by François Bégaudeau</li>
+            </ul>
+        </div>
+        <div>
+            <h3 class="text-lg font-semibold">2023</h3>
+            <ul class="list-disc list-inside text-sm">
+                <li><em>Towards Beauty</em> by David Foenkinos</li>
+                <li><em>The Metamorphosis</em> by Franz Kafka</li>
+            </ul>
+        </div>
+
+
     {{ $js := resources.Get "js/lastfm.js" | minify | fingerprint }}
     <script src="{{ $js.RelPermalink }}" defer></script>
 {{ end }}
