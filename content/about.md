@@ -64,11 +64,11 @@ title: "about"
              %@@@-:::.::..:::::::::::::.....::::::----======---------==-=@@@@@@@@@#@@@                
 </pre>
 my name is walid cavelius, i'm currently a cs student at the [university of technology of compiègne](https://en.wikipedia.org/wiki/University_of_Technology_of_Compi%C3%A8gne)  
-my interests include programming, as you may've seen, philosophy, video games and art as a whole, specifically [music](https://www.last.fm/user/KhalWalid) and cinema
+my interests include programming (specifically drawn to compilers, dist. systems, and low-level. i'm passionate about really understanding how computers work under the hood), philosophy, video games and art as a whole, specifically [music](https://www.last.fm/user/KhalWalid) and cinema.
 
 you may contact me: [walid [at] caveli [dot] us](mailto:walid@caveli.us) 
 
-[cv](/assets/CV_en_cavelius.pdf), [github](https://github.com/walidcavelius), [linkedin](https://www.linkedin.com/in/walid-cavelius/)
+[cv](/assets/CV_en_cavelius.pdf), [github](https://github.com/walidcavelius), [linkedin](https://www.linkedin.com/in/cavelius/)
 
 <p>
   <img src="/assets/hugo.png" alt="hugo 88x21" style="display:inline;"/><img src="/assets/vim.gif" alt="madewithvim" style="display:inline;"/>
