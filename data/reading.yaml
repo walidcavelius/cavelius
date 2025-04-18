@@ -2,6 +2,8 @@
 # This file contains books read by year
 years:
   2025:
+    - title: "Vallée du silicium"
+      author: "Alain Damasio"
     - title: "Rendezvous with Rama"
       author: "Arthur C. Clarke"
   2024:
