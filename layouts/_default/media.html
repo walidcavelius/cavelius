@@ -4,7 +4,6 @@
     {{ partial "media/lastfm.html" . }}
     
     <h2 class="mt-10">reading list</h2>
-    <p>{{ .Params.reading_description | default "i don't read a lot but i'm trying to, i hope i'll get to remove this comment soon" }}</p>
     
     {{ with .Site.Data.reading.years }}
         {{ $years := slice }}

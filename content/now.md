@@ -2,7 +2,7 @@
 title: "now"
 ---
 
-things I'm doing right now. updated on jul. 06 2025
+things I'm doing right now. updated on jul. 23 2025
 
-- finished my last ever semester at UTC 💔
-- planning my malaysia trip
+- holidays in malaysia
+- planning shanghai semester

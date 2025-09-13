@@ -2,6 +2,12 @@
 # This file contains books read by year
 years:
   2025:
+    - title: "Capitalist Realism: Is There No Alternative?"
+      author: "Mark Fisher"
+    - title: "Elephant and Other Stories"
+      author: "Raymond Carver"
+    - title: "L'adversaire"
+      author: "Emmanuel Carrère"
     - title: "Ask the Dust"
       author: "John Fante"
     - title: "Bartleby, the Scrivener: A Story of Wall Street"
